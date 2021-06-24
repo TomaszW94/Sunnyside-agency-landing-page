@@ -1,0 +1,635 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: $fontSize;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+
+.header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 62%;
+  min-height: 100vh;
+  &__main-title {
+    font-family: $fontFamilyHeading;
+    color: $white;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 17.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__arrow-down {
+    display: flex;
+    justify-content: center;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    min-height: 14vh;
+  }
+}
+.main {
+  overflow: hidden;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  width: calc(100% - 2rem);
+  background-color: #3ebfffec;
+  z-index: 1;
+  &__menu {
+    min-width: 90vw;
+    padding: 1.2rem 0;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    position: absolute;
+    top: 135%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    &::before {
+      content: "";
+      display: block;
+      z-index: 2;
+      border-left: 20px solid transparent;
+      border-bottom: 20px solid $white;
+      position: absolute;
+      top: -5%;
+      right: 0%;
+    }
+    &--active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%);
+    }
+  }
+  &__menu-item {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 1.3rem 3rem;
+  }
+  &__menu-link {
+    color: $darkGrayishBlue;
+    text-decoration: none;
+    font-family: $fontFamilyText;
+    &--contact {
+      font-family: $fontFamilyHeading;
+      color: $veryDarkDesaturatedBlue;
+      background-color: $yellow;
+      text-transform: uppercase;
+      padding: 1rem 1.3rem;
+      margin-top: 3px;
+      border-radius: 3rem;
+      font-weight: 900;
+    }
+  }
+  &__logo {
+    display: flex;
+  }
+  &__logo-img {
+    display: flex;
+  }
+  &__hamburger-menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+}
+.section {
+  min-height: 55vh;
+  text-align: center;
+}
+
+.section-about {
+  &__heading {
+    font-family: $fontFamilyHeading;
+    font-size: 2rem;
+    font-weight: 900;
+    color: $veryDarkDesaturatedBlue;
+  }
+  &__more-info {
+    font-family: $fontFamilyText;
+    color: $darkGrayishBlue;
+    margin: 2em 0;
+  }
+  &__img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 50vh;
+    width: 100%;
+    &--transform {
+      background-image: url("../images/mobile/image-transform.jpg");
+    }
+    &--stand-out {
+      background-image: url("../images/mobile/image-stand-out.jpg");
+    }
+  }
+  &__content-box {
+    padding: 4rem 1rem;
+  }
+  &__learn-more {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $fontFamilyHeading;
+    color: $veryDarkDesaturatedBlue;
+    font-weight: 900;
+    &::before {
+      content: "";
+      height: 10px;
+      width: 120%;
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    &--transform::before {
+      background-color: rgba($yellow, 0.2);
+      border-radius: 10px;
+    }
+    &--stand-out::before {
+      background-color: rgba($SoftRed, 0.2);
+      border-radius: 10px;
+    }
+  }
+}
+
+.section-services {
+  &__heading {
+    font-family: $fontFamilyHeading;
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+    &--graphic-color {
+      color: $darkDesaturatedCyan;
+    }
+    &--photo-color {
+      color: $darkBlue;
+    }
+  }
+  &__more-info {
+    font-family: $fontFamilyText;
+    margin-bottom: 1em;
+    &--textcolor-graphic {
+      color: $darkDesaturatedCyan;
+    }
+    &--textcolor-photo {
+      color: $darkBlue;
+    }
+  }
+  &__img {
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 85vh;
+    &--graphic {
+      background-image: url("../images/mobile/image-graphic-design.jpg");
+    }
+    &--photo {
+      background-image: url("../images/mobile/image-photography.jpg");
+    }
+  }
+  &__content-box {
+    padding: 1em;
+  }
+}
+
+.section-testimonials {
+  margin: 3rem 0;
+  &__heading {
+    font-family: $fontFamilyHeading;
+    text-transform: uppercase;
+    color: $grayishBlue;
+    letter-spacing: 2.5px;
+    margin: 4rem 0 1.5rem 0;
+  }
+  &__more-info {
+    font-family: $fontFamilyText;
+    margin: 1em 0;
+    &--textcolor {
+      color: $veryDarkDesaturatedBlue;
+    }
+  }
+  &__content-box {
+    padding: 3rem 2rem;
+  }
+  &__client {
+    display: flex;
+    flex-direction: column;
+  }
+  &__client-name {
+    font-family: $fontFamilyHeading;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  &__client-position {
+    font-family: $fontFamilyText;
+    color: $grayishBlue;
+  }
+  &__img-client {
+    border-radius: 50%;
+    height: 5em;
+  }
+}
+
+.section-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &__img {
+    background-size: cover;
+    &--milk {
+      background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+    }
+    &--orange {
+      background-image: url("../images/mobile/image-gallery-orange.jpg");
+    }
+    &--cone {
+      background-image: url("../images/mobile/image-gallery-cone.jpg");
+    }
+    &--cubes {
+      background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $darkModerateCyan;
+  padding: 3rem;
+  overflow-x: hidden;
+  font-family: $fontFamilyText;
+  &__list {
+    display: flex;
+    list-style-type: none;
+    margin: 2.5rem 0;
+  }
+  &__list-link {
+    text-decoration: none;
+    padding: 0 2rem;
+    color: $darkDesaturatedCyan;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &__facebook,
+  &__instagram,
+  &__twitter {
+    margin-right: 2rem;
+  }
+  &__facebook,
+  &__instagram,
+  &__twitter,
+  &__pinterest {
+    cursor: pointer;
+  }
+}
+.attribution {
+  font-family: $fontFamilyText;
+  font-size: 11px;
+  text-align: center;
+  background-color: $darkModerateCyan;
+  font-size: 0.7rem;
+}
+.attribution a {
+  color: black;
+  font-family: $fontFamilyHeading;
+  text-decoration: none;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 568px) {
+  .header {
+    background-image: url("../images/desktop/image-header.jpg");
+    background-position: center 0%;
+    min-height: 100vh;
+    &__main-title {
+      top: 20%;
+    }
+    &__arrow-down {
+      bottom: 33%;
+      min-height: 20vh;
+    }
+  }
+  .nav {
+    &__menu {
+      padding: 0rem 0;
+      top: 100%;
+      min-width: 80vw;
+    }
+    &__menu-link {
+      font-size: 1rem;
+    }
+  }
+  .section-about {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      min-height: 100vh;
+    }
+    &__container:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+    }
+    &__content-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0 0;
+    }
+  }
+
+  .section-services {
+    display: flex;
+    &__more-info {
+      width: 95%;
+      margin: 0 auto;
+    }
+    &__img {
+      position: relative;
+      width: 100%;
+      min-height: 25em;
+    }
+    &__content-box {
+      position: absolute;
+      top: 55%;
+    }
+  }
+
+  .section-testimonials {
+    &__img-client {
+      border-radius: 50%;
+      min-height: 30vh;
+    }
+  }
+  .section-gallery {
+    height: 25em;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__main-title {
+      font-size: 3rem;
+    }
+  }
+  .nav {
+    &__logo-img {
+      min-height: 3vh;
+    }
+    &__hamburger-menu-icon {
+      min-height: 2vh;
+    }
+    &__menu {
+      padding: 3rem 0;
+      top: 100%;
+      min-width: 90vw;
+    }
+  }
+  .section-about {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      min-height: 50vh;
+    }
+    &__heading {
+      padding: 0 0.3rem;
+      font-size: 1.8rem;
+    }
+    &__more-info {
+      padding: 0 0.8rem;
+    }
+    &__img--transform {
+      background-image: url("../images/desktop/image-transform.jpg");
+    }
+    &__img--stand-up {
+      background-image: url("../images/desktop/image-stand-out.jpg");
+    }
+  }
+  .section-services {
+    &__img--graphic {
+      background-image: url("../images/desktop/image-graphic-design.jpg");
+      width: 50%;
+      position: relative;
+    }
+    &__img--photo {
+      background-image: url("../images/desktop/image-photography.jpg");
+      width: 50%;
+      position: relative;
+    }
+  }
+  .section-testimonials {
+    &__img-client {
+      min-height: 12vh;
+    }
+    &__more-info {
+      width: 50%;
+      margin: 1rem auto;
+    }
+  }
+  .section-gallery {
+    &__img--milk {
+      background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+      background-position: center;
+      width: 100%;
+    }
+    &__img--orange {
+      background-image: url("../images/desktop/image-gallery-orange.jpg");
+      background-position: center;
+      width: 100%;
+    }
+    &__img--cone {
+      background-image: url("../images/desktop/image-gallery-cone.jpg");
+      background-position: center;
+      width: 100%;
+    }
+    &__img--cubes {
+      background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+      background-position: center;
+      width: 100%;
+    }
+  }
+  .attribution {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-testimonials {
+    &__clients {
+      display: flex;
+    }
+    &__more-info {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__main-title {
+      font-size: 3.5rem;
+      letter-spacing: 15px;
+    }
+    &__arrow-down {
+      bottom: 33%;
+      min-height: 15vh;
+    }
+  }
+  .nav {
+    position: initial;
+    &__menu {
+      width: 100%;
+      padding: 0rem 0;
+      display: flex;
+      flex-direction: row;
+      visibility: visible;
+      opacity: 1;
+      justify-content: flex-end;
+      background-color: transparent;
+      position: static;
+      top: 0%;
+      left: 0%;
+      transform: translate(0, 0);
+      z-index: 1;
+      transition: none;
+      &::before {
+        display: none;
+      }
+    }
+    &__menu-item {
+      padding: 1.3rem 2rem;
+    }
+    &__menu-link {
+      color: $white;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+      &:hover {
+        color: #23303e;
+      }
+      &--contact {
+        color: $veryDarkDesaturatedBlue;
+        background-color: $white;
+        padding: 1rem 1.3rem;
+        margin-top: 0px;
+        transition: background 0.2s;
+        &:hover {
+          background-color: $yellow;
+          color: black;
+        }
+      }
+    }
+    &__logo {
+      display: flex;
+      align-items: center;
+    }
+    &__hamburger-menu {
+      display: none;
+    }
+  }
+  .section-about {
+    &__heading {
+      font-size: 3rem;
+      text-align: left;
+      align-self: flex-start;
+      padding: 0 0;
+      width: 55%;
+      margin: 0 auto;
+    }
+    &__more-info {
+      text-align: left;
+      padding: 0 0;
+      width: 55%;
+      font-size: 1.3rem;
+    }
+    &__learn-more {
+      margin-right: 41%;
+      &::before {
+        width: 100%;
+        transition: background 0.3s ease-in-out;
+      }
+      &--transform:hover::before {
+        background-color: $yellow;
+      }
+      &--stand-out:hover::before {
+        background-color: $SoftRed;
+      }
+    }
+    &__container {
+      min-height: 65vh;
+    }
+  }
+  .section-services {
+    overflow: hidden;
+    &__heading {
+      font-size: 2rem;
+    }
+    &__more-info {
+      width: 50%;
+      font-size: 1.3rem;
+    }
+    &__img {
+      min-height: 70vh;
+    }
+  }
+  .section-testimonials {
+    display: flex;
+    flex-direction: column;
+    &__heading {
+      font-size: 1.8rem;
+    }
+    &__more-info {
+      width: 70%;
+    }
+  }
+  .section-gallery {
+    display: flex;
+  }
+  .footer {
+    &__logo {
+      height: 2em;
+    }
+  }
+  .attribution {
+    font-size: 1.1rem;
+  }
+}

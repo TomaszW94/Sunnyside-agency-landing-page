@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a class="nav__logo-link" href="#header">
+            <img class="nav__logo-img" src="images/logo.svg" alt="logo"
+          /></a>
+        </div>
+        <ul class="nav__menu">
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#about">About</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#services">Services</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav__menu-item">
+            <a class="nav__menu-link nav__menu-link--contact" href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button class="nav__hamburger-menu">
+          <img
+            class="nav__hamburger-menu-icon"
+            src="images/icon-hamburger.svg"
+            alt="menu-icon"
+          />
+        </button>
+      </nav>
+      <h1 class="header__main-title">We are creatives</h1>
+      <div class="header__arrow-down">
+        <a href="#about">
+          <img
+            class="header__arrow-img"
+            src="images/icon-arrow-down.svg"
+            alt=""
+          />
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section section-about" id="about">
+        <div
+          class="container section-about__container"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-offset="400"
+        >
+          <div class="section-about__img section-about__img--transform"></div>
+          <div class="section-about__content-box">
+            <h2 class="section-about__heading">Transform your brand</h2>
+            <p class="section-about__more-info">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <a
+              class="
+                section-about__learn-more section-about__learn-more--transform
+              "
+              href="#"
+              >Learn more</a
+            >
+          </div>
+        </div>
+        <div
+          class="container section-about__container"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-offset="400"
+        >
+          <div class="section-about__img section-about__img--stand-out"></div>
+          <div class="section-about__content-box">
+            <h2 class="section-about__heading">
+              Stand out to the right audience
+            </h2>
+            <p class="section-about__more-info u-text">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <a
+              class="
+                section-about__learn-more section-about__learn-more--stand-out
+              "
+              href="#"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section section-services" id="services">
+        <div
+          class="section-services__img section-services__img--graphic"
+          data-aos="fade-down"
+          data-aos-duration="1500"
+          data-aos-offset="400"
+        >
+          <div class="section-services__content-box">
+            <h3
+              class="
+                section-services__heading
+                section-services__heading--graphic-color
+              "
+            >
+              Graphic design
+            </h3>
+            <p
+              class="
+                section-services__more-info
+                section-services__more-info--textcolor-graphic
+              "
+            >
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+        <div
+          class="section-services__img section-services__img--photo"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-offset="400"
+        >
+          <div class="section-services__content-box">
+            <h3
+              class="
+                section-services__heading section-services__heading--photo-color
+              "
+            >
+              Photography
+            </h3>
+            <p
+              class="
+                section-services__more-info
+                section-services__more-info--textcolor-photo
+              "
+            >
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section section-testimonials"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        data-aos-offset="400"
+      >
+        <h3 class="section-testimonials__heading">Client testimonials</h3>
+        <div class="section-testimonials__clients">
+          <div class="section-testimonials__content-box">
+            <img
+              class="section-testimonials__img-client"
+              src="images/image-emily.jpg"
+              alt="emily photo"
+            />
+            <p class="section-testimonials__more-info">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <div class="section-testimonials__client">
+              <span class="section-testimonials__client-name">Emily R.</span>
+              <small class="section-testimonials__client-position"
+                >Marketing Director</small
+              >
+            </div>
+          </div>
+          <div class="section-testimonials__content-box">
+            <img
+              class="section-testimonials__img-client"
+              src="images/image-thomas.jpg"
+              alt="thomas photo"
+            />
+            <p class="section-testimonials__more-info">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <div class="section-testimonials__client">
+              <span class="section-testimonials__client-name">Thomas S.</span>
+              <small class="section-testimonials__client-position"
+                >Chief Operating Officer</small
+              >
+            </div>
+          </div>
+          <div class="section-testimonials__content-box">
+            <img
+              class="section-testimonials__img-client"
+              src="images/image-jennie.jpg"
+              alt="jennie photo"
+            />
+            <p class="section-testimonials__more-info">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <div class="section-testimonials__client">
+              <span class="section-testimonials__client-name">Jennie F.</span>
+              <small class="section-testimonials__client-position"
+                >Business Owner</small
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section section-gallery"
+        data-aos="zoom-out"
+        data-aos-duration="2000"
+        data-aos-offset="400"
+        id="projects"
+      >
+        <div class="section-gallery__img section-gallery__img--milk"></div>
+        <div class="section-gallery__img section-gallery__img--orange"></div>
+        <div class="section-gallery__img section-gallery__img--cone"></div>
+        <div class="section-gallery__img section-gallery__img--cubes"></div>
+      </section>
+    </main>
+    <footer class="footer" id="contact">
+      <a class="footer__link" href="#header">
+        <img class="footer__logo" src="images/logo-footer.svg" alt="logo" />
+      </a>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a class="footer__list-link" href="#about">About</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__list-link" href="#services">Services</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__list-link" href="#projects">Projects</a>
+        </li>
+      </ul>
+      <div class="social-media">
+        <div class="social-media__facebook">
+          <a
+            class="social-media__facebook-link"
+            href="https://www.facebook.com/"
+          >
+            <img
+              class="social-media__facebook-img"
+              src="images/icon-facebook.svg"
+              alt=""
+          /></a>
+        </div>
+        <div class="social-media__instagram">
+          <a
+            class="social-media__instagram-link"
+            href="https://www.instagram.com/"
+          >
+            <img
+              class="social-media__instagram-img"
+              src="images/icon-instagram.svg"
+              alt=""
+          /></a>
+        </div>
+        <div class="social-media__twitter">
+          <a href="https://twitter.com/">
+            <img
+              class="social-media__twitter-img"
+              src="images/icon-twitter.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="social-media__pinterest">
+          <a href="https://pinterest.com/">
+            <img
+              class="social-media__pinterest-img"
+              src="images/icon-pinterest.svg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="attribution">
+      Challenge by
+      <a
+        class="attribution__link"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/TomaszW94" class="attribution__link-myname"
+        >TomaszW94</a
+      >
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
